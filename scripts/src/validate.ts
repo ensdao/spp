@@ -1,4 +1,5 @@
 import { marked, type Tokens } from 'marked'
+import { GitHubError } from './error'
 
 const requiredProposalH2s = [
   'Applicant Information',
@@ -10,11 +11,16 @@ const requiredProposalH2s = [
   'Conflict Of Interest Statment',
 ]
 
-export function validateProposalHeadings(content: string) {
+export function validateProposalHeadings(content: string, filename: string) {
   const { h1s, h2s } = extractHeadings(content)
 
   if (h1s.length !== 1) {
-    throw new Error('Only one H1 is allowed')
+    throw new GitHubError({
+      filename,
+      line: 0,
+      title: 'Only one H1 is allowed',
+      message: 'Please add only one H1 to the proposal.md file.',
+    })
   }
 
   const missingH2s = requiredProposalH2s.filter(
@@ -32,7 +38,7 @@ export function validateProposalHeadings(content: string) {
 
 const requiredUpdateH2s = ['Summary', 'KPIs']
 
-export function validateUpdateHeadings(content: string) {
+export function validateUpdateHeadings(content: string, filename: string) {
   const { h1s, h2s } = extractHeadings(content)
 
   if (h1s.length !== 1) {
@@ -44,7 +50,14 @@ export function validateUpdateHeadings(content: string) {
   )
 
   if (missingH2s.length > 0) {
-    throw new Error(`Missing required headings: ${missingH2s.join(', ')}`)
+    throw new GitHubError({
+      filename,
+      line: 0,
+      title: 'Missing required headings',
+      message: `This update is missing the following headings: ${missingH2s.join(
+        ', '
+      )}`,
+    })
   }
 }
 
