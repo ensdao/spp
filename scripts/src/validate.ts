@@ -28,11 +28,14 @@ export function validateProposalHeadings(content: string, filename: string) {
   )
 
   if (missingH2s.length > 0) {
-    throw new Error(
-      `Missing required headings: ${missingH2s.join(
+    throw new GitHubError({
+      filename,
+      line: 0,
+      title: 'Missing required headings',
+      message: `This proposal is missing the following headings: ${missingH2s.join(
         ', '
-      )}. Please add them to the proposal.md file.`
-    )
+      )}`,
+    })
   }
 }
 
@@ -42,7 +45,12 @@ export function validateUpdateHeadings(content: string, filename: string) {
   const { h1s, h2s } = extractHeadings(content)
 
   if (h1s.length !== 1) {
-    throw new Error('Only one H1 is allowed')
+    throw new GitHubError({
+      filename,
+      line: 0,
+      title: 'Only one H1 is allowed',
+      message: 'Please add only one H1 to the update.md file.',
+    })
   }
 
   const missingH2s = requiredUpdateH2s.filter(

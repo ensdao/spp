@@ -14,6 +14,8 @@ try {
   await validate()
 } catch (error) {
   if (error instanceof GitHubError) {
+    console.log(error)
+
     // Log the error instead of throwing it so it displays nicely in GitHub Workflows
     console.log(error.message)
     process.exit(1)
@@ -44,19 +46,28 @@ async function validate() {
       const logoPath = path.join(providerPath, validatedFrontmatter.logo)
       const logoExists = await Bun.file(logoPath).exists()
       if (!logoExists) {
-        throw new Error(`File does not exist: ${logoPath}`)
+        throw new GitHubError({
+          filename: logoPath,
+          line: 0,
+          title: 'File does not exist',
+          message: `The logo file does not exist: ${logoPath}`,
+        })
       }
 
       validateProposalHeadings(proposalMarkdown, proposalPath)
 
-      const updates = await readdir(path.join(providerPath, 'updates'))
+      const updatesPath = path.join(providerPath, 'updates')
+      const updates = await readdir(updatesPath)
       const updateFiles = updates.filter((file) => file.endsWith('.md'))
 
       // Make sure there's nothing else besides {number}.md files
       if (updateFiles.length !== updates.length) {
-        throw new Error(
-          `There should only be numbered .md files in the updates folder`
-        )
+        throw new GitHubError({
+          filename: providerPath,
+          line: 0,
+          title: 'Invalid update files',
+          message: `There should only be numbered .md files in the updates folder`,
+        })
       }
 
       // Check that updates are numbered sequentially
@@ -64,7 +75,12 @@ async function validate() {
         const update = updateFiles[i]!
         const updateNumber = parseInt(update.split('.')[0]!)
         if (updateNumber !== i + 1) {
-          throw new Error('Updates are not numbered sequentially')
+          throw new GitHubError({
+            filename: updatesPath,
+            line: 0,
+            title: 'Updates are not numbered sequentially',
+            message: `The update files are not numbered sequentially`,
+          })
         }
       }
 
