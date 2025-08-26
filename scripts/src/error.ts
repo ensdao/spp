@@ -22,6 +22,6 @@ export class GitHubError extends Error {
     // Store the GitHub annotation separately
     this.filename = relativeFilename
     this.title = title
-    this.annotation = `::error file=${relativeFilename},line=1,title=${title}::${message}`
+    this.annotation = `::error file=${relativeFilename},title=${title}::${message}`
   }
 }

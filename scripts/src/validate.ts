@@ -30,7 +30,9 @@ export function validateProposalHeadings(content: string, filename: string) {
     throw new GitHubError({
       filename,
       title: 'Missing required headings',
-      message: `${missingH2s.join(', ')}`,
+      message: `This proposal is missing the following headings: ${missingH2s.join(
+        ', '
+      )}`,
     })
   }
 }
@@ -56,7 +58,9 @@ export function validateUpdateHeadings(content: string, filename: string) {
     throw new GitHubError({
       filename,
       title: 'Missing required headings',
-      message: `${missingH2s.join(', ')}`,
+      message: `This update is missing the following headings: ${missingH2s.join(
+        ', '
+      )}`,
     })
   }
 }
