@@ -36,17 +36,27 @@ async function validate() {
       )
 
       // Validate the frontmatter
-      const validatedFrontmatter =
-        ProposalFrontmatter.parse(proposalFrontmatter)
+      const { data: validatedFrontmatter, error: frontmatterError } =
+        ProposalFrontmatter.safeParse(proposalFrontmatter)
+
+      if (frontmatterError) {
+        throw new GitHubError({
+          filename: proposalPath,
+          title: 'Invalid frontmatter',
+          message: `The frontmatter is invalid: ${frontmatterError.issues
+            .map((issue) => issue.message)
+            .join(', ')}`,
+        })
+      }
 
       // Check if the logo (as a relative path) exists
       const logoPath = path.join(providerPath, validatedFrontmatter.logo)
       const logoExists = await Bun.file(logoPath).exists()
       if (!logoExists) {
         throw new GitHubError({
-          filename: logoPath,
-          title: 'File does not exist',
-          message: `The logo file does not exist: ${logoPath}`,
+          filename: proposalPath,
+          title: 'Logo does not exist',
+          message: `\`${validatedFrontmatter.logo}\` does not exist`,
         })
       }
 
