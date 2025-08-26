@@ -17,7 +17,6 @@ export function validateProposalHeadings(content: string, filename: string) {
   if (h1s.length !== 1) {
     throw new GitHubError({
       filename,
-      line: 0,
       title: 'Only one H1 is allowed',
       message: 'Please add only one H1 to the proposal.md file.',
     })
@@ -30,7 +29,6 @@ export function validateProposalHeadings(content: string, filename: string) {
   if (missingH2s.length > 0) {
     throw new GitHubError({
       filename,
-      line: 0,
       title: 'Missing required headings',
       message: `This proposal is missing the following headings: ${missingH2s.join(
         ', '
@@ -47,7 +45,6 @@ export function validateUpdateHeadings(content: string, filename: string) {
   if (h1s.length !== 1) {
     throw new GitHubError({
       filename,
-      line: 0,
       title: 'Only one H1 is allowed',
       message: 'Please add only one H1 to the update.md file.',
     })
@@ -60,7 +57,6 @@ export function validateUpdateHeadings(content: string, filename: string) {
   if (missingH2s.length > 0) {
     throw new GitHubError({
       filename,
-      line: 0,
       title: 'Missing required headings',
       message: `This update is missing the following headings: ${missingH2s.join(
         ', '

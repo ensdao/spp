@@ -2,18 +2,16 @@ import path from 'node:path'
 
 type GitHubErrorOptions = {
   filename: string
-  line: number
   title: string
   message: string
 }
 
 export class GitHubError extends Error {
   public readonly filename: string
-  public readonly line: number
   public readonly title: string
   public readonly annotation: string
 
-  constructor({ filename, line, title, message }: GitHubErrorOptions) {
+  constructor({ filename, title, message }: GitHubErrorOptions) {
     // Use the message as the regular error message
     super(message)
 
@@ -23,8 +21,7 @@ export class GitHubError extends Error {
 
     // Store the GitHub annotation separately
     this.filename = relativeFilename
-    this.line = line
     this.title = title
-    this.annotation = `::error file=${relativeFilename},line=${line},title=${title}::${message}`
+    this.annotation = `::error file=${relativeFilename},title=${title}::${message}`
   }
 }

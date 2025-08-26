@@ -47,7 +47,6 @@ async function validate() {
       if (!logoExists) {
         throw new GitHubError({
           filename: logoPath,
-          line: 0,
           title: 'File does not exist',
           message: `The logo file does not exist: ${logoPath}`,
         })
@@ -63,7 +62,6 @@ async function validate() {
       if (updateFiles.length !== updates.length) {
         throw new GitHubError({
           filename: providerPath,
-          line: 0,
           title: 'Invalid update files',
           message: `There should only be numbered .md files in the updates folder`,
         })
@@ -76,7 +74,6 @@ async function validate() {
         if (updateNumber !== i + 1) {
           throw new GitHubError({
             filename: updatesPath,
-            line: 0,
             title: 'Updates are not numbered sequentially',
             message: `The update files are not numbered sequentially`,
           })
