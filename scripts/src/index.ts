@@ -2,9 +2,9 @@ import { readdir } from 'node:fs/promises'
 import matter from 'gray-matter'
 import path from 'node:path'
 
+import { GitHubError } from './error'
 import { ProposalFrontmatter } from './schema'
 import { validateProposalHeadings, validateUpdateHeadings } from './validate'
-import { GitHubError } from './error'
 
 const rootPath = path.join(import.meta.dirname, '..', '..')
 const root = await readdir(rootPath)

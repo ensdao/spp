@@ -1,4 +1,5 @@
 import { marked, type Tokens } from 'marked'
+
 import { GitHubError } from './error'
 
 const requiredProposalH2s = [
