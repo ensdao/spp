@@ -14,14 +14,13 @@ try {
   await validate()
 } catch (error) {
   if (error instanceof GitHubError) {
-    console.log(error)
-
-    // Log the error instead of throwing it so it displays nicely in GitHub Workflows
-    console.log(error.message)
+    // Output the GitHub annotation to stdout
+    console.log(error.annotation)
     process.exit(1)
   }
 
-  throw error
+  console.error(error)
+  process.exit(1)
 }
 
 async function validate() {
