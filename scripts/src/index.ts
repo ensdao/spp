@@ -14,6 +14,7 @@ try {
   await validate()
 } catch (error) {
   if (error instanceof GitHubError) {
+    console.log(error)
     // Output the GitHub annotation to stdout
     console.log(error.annotation)
     process.exit(1)
