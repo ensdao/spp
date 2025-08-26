@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import path from 'node:path'
 
 import { ProposalFrontmatter } from './schema'
-import { validateProposalHeadings } from './validate'
+import { validateProposalHeadings, validateUpdateHeadings } from './validate'
 
 const rootPath = path.join(import.meta.dirname, '..', '..')
 const root = await readdir(rootPath)
@@ -17,9 +17,9 @@ for (const sppSeason of sppSeasons) {
     const providerPath = path.join(seasonPath, provider)
 
     // Read the proposal.md file
-    const proposal = await Bun.file(`${providerPath}/proposal.md`).text()
-    const { data: proposalFrontmatter, content: proposalContent } =
-      matter(proposal)
+    const { data: proposalFrontmatter, content: proposalMarkdown } = matter(
+      await Bun.file(`${providerPath}/proposal.md`).text()
+    )
 
     // Validate the frontmatter
     const validatedFrontmatter = ProposalFrontmatter.parse(proposalFrontmatter)
@@ -31,6 +31,33 @@ for (const sppSeason of sppSeasons) {
       throw new Error(`File does not exist: ${logoPath}`)
     }
 
-    validateProposalHeadings(proposalContent)
+    validateProposalHeadings(proposalMarkdown)
+
+    const updates = await readdir(path.join(providerPath, 'updates'))
+    const updateFiles = updates.filter((file) => file.endsWith('.md'))
+
+    // Make sure there's nothing else besides {number}.md files
+    if (updateFiles.length !== updates.length) {
+      throw new Error(
+        `There should only be numbered .md files in the updates folder`
+      )
+    }
+
+    // Check that updates are numbered sequentially
+    for (let i = 0; i < updateFiles.length; i++) {
+      const update = updateFiles[i]!
+      const updateNumber = parseInt(update.split('.')[0]!)
+      if (updateNumber !== i + 1) {
+        throw new Error('Updates are not numbered sequentially')
+      }
+    }
+
+    for (const updateFile of updateFiles) {
+      const updatePath = path.join(providerPath, 'updates', updateFile)
+      const updateContent = await Bun.file(updatePath).text()
+      const { content: updateMarkdown } = matter(updateContent)
+
+      validateUpdateHeadings(updateMarkdown)
+    }
   }
 }
