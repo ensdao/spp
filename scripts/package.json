@@ -1,6 +1,9 @@
 {
   "private": true,
   "type": "module",
+  "scripts": {
+    "validate": "bun run src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
