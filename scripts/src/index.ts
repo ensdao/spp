@@ -14,14 +14,11 @@ try {
   await validate()
 } catch (error) {
   if (error instanceof GitHubError) {
-    console.log(error)
-    // Output the GitHub annotation to stdout
     console.log(error.annotation)
     process.exit(1)
   }
 
-  console.error(error)
-  process.exit(1)
+  throw error
 }
 
 async function validate() {
