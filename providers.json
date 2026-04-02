@@ -47,8 +47,8 @@
       }
     },
     {
-      "name": "Ethereum Identity Foundation",
-      "slug": "ethereum-identity-fnd",
+      "name": "EthID",
+      "slug": "ethid",
       "website": "https://ethid.org",
       "programs": {
         "SPP1": {
