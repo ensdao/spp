@@ -43,7 +43,8 @@
       "reports": {
         "2025/Q1": "https://discuss.ens.domains/t/eth-limo-q1-2025-update/20586",
         "2025/Q3": "https://discuss.ens.domains/t/eth-limo-q3-2025-update/21577",
-        "2025/Q4": "https://discuss.ens.domains/t/eth-limo-q4-2025-update/21796"
+        "2025/Q4": "https://discuss.ens.domains/t/eth-limo-q4-2025-update/21796",
+        "2026/Q1": "https://discuss.ens.domains/t/eth-limo-q1-2026-update/22082"
       }
     },
     {
@@ -82,7 +83,6 @@
         }
       },
       "reports": {
-        "2025/Q2": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/1",
         "2025/Q3": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/2",
         "2025/Q4": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/3",
         "2026/Q1": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/4"
@@ -178,7 +178,8 @@
       },
       "reports": {
         "2025/Q2": "https://discuss.ens.domains/t/unruggable-spp2-q2-2025-quarterly-report/21200",
-        "2025/Q3": "https://discuss.ens.domains/t/unruggable-update-and-spp2-q3-2025-quarterly-report/21688"
+        "2025/Q3": "https://discuss.ens.domains/t/unruggable-update-and-spp2-q3-2025-quarterly-report/21688",
+        "2025/Q4": "https://discuss.ens.domains/t/unruggable-update-and-spp2-q4-2025-quarterly-report/22093"
       }
     },
     {
@@ -208,7 +209,8 @@
       "reports": {
         "2025/Q3": "https://discuss.ens.domains/t/spp2-zk-email-application/20450/14",
         "2025/Q4": "https://discuss.ens.domains/t/spp2-zk-email-application/20450/14",
-        "2026/Q1": "https://discuss.ens.domains/t/spp2-zk-email-application/20450/15"
+        "2026/Q1": "https://discuss.ens.domains/t/spp2-zk-email-application/20450/15",
+        "2026/Q2": "https://discuss.ens.domains/t/spp2-zk-email-application/20450/16"
       }
     }
   ]
