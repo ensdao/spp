@@ -51,6 +51,31 @@
         "snapshotUrl": "https://snapshot.box/#/s:ens.eth/proposal/0x98c65ac02f738ddb430fcd723ea5852a45168550b3daf20f75d5d508ecf28aa1",
         "docsUrl": "https://docs.ens.domains/dao/proposals/6.10/"
       }
+    },
+    "SPP3": {
+      "name": "Service Provider Program Season 3",
+      "year1Quarters": ["2026/Q3", "2026/Q4", "2027/Q1", "2027/Q2"],
+      "budget": 3400000,
+      "startDate": "2026-08-01",
+      "discussionUrl": "https://discuss.ens.domains/t/21918",
+      "budgetProposal": {
+        "id": "EP 6.42",
+        "title": "Program Authorization",
+        "description": "Authorized SPP3 with a budget capped at 20% of trailing protocol revenue (~$3.4M) and a named committee to select providers.",
+        "date": "2026-05-10",
+        "forumUrl": "https://discuss.ens.domains/t/22086",
+        "snapshotUrl": "https://snapshot.box/#/s:ens.eth/proposal/0x3e523451340e987e9d3745fb33585bd7136bb6fa8519691ba7b04fa160d4ab7b",
+        "docsUrl": "https://docs.ens.domains/dao/proposals/6.42/"
+      },
+      "selectionProposal": {
+        "id": "EP 6.51",
+        "title": "Cohort Recommendation",
+        "description": "Ratified via on-chain executable the committee's cohort of 4 providers selected from 26 applications. Originally published as EP 6.49.",
+        "date": "2026-07-16",
+        "forumUrl": "https://discuss.ens.domains/t/22237",
+        "snapshotUrl": "https://vote.ensdao.org/#/onchain/30153206728472299340257495645753485226870528642942223493225654414745632348879",
+        "docsUrl": "https://docs.ens.domains/dao/proposals/6.51/"
+      }
     }
   }
 }
