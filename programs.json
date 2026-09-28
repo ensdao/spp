@@ -57,6 +57,7 @@
       "year1Quarters": ["2026/Q3", "2026/Q4", "2027/Q1", "2027/Q2"],
       "budget": 3400000,
       "startDate": "2026-08-01",
+      "reportDueDays": 30,
       "discussionUrl": "https://discuss.ens.domains/t/21918",
       "budgetProposal": {
         "id": "EP 6.42",

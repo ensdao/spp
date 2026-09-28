@@ -71,6 +71,7 @@ Defines each SPP term: quarters, budget, and the governance proposals that creat
 | `year2Quarters` | No | Second-year quarters (only `streamDuration: 2` providers) |
 | `budget` | Yes | Total annual budget in USD |
 | `startDate` | Yes | Date streams commenced (`YYYY-MM-DD`) |
+| `reportDueDays` | No | Days after each quarter ends that its report is due, per the program's terms (default `0`: due on the quarter's last day) |
 | `discussionUrl` | Yes | Initial forum discussion for this program |
 | `budgetProposal` | Yes | Snapshot vote that defined the budget |
 | `selectionProposal` | Yes | Snapshot vote that selected providers |
@@ -86,7 +87,7 @@ Streams rarely commence on a quarter boundary, so the first listed quarter is al
 
 Any work done before that first quarter (the partial-period stub between `startDate` and the start of the first full quarter) is rolled into the first report; it should not be tracked as a separate report entry.
 
-**Exception — SPP3.** SPP3 providers are bound by the [SPP3 Program Terms](https://github.com/coltron-code/spp3-docs/blob/main/ENS_DAO_Service_Provider_Program_Terms_v1-0.pdf) (clause 6.3), which require a report within 30 days after the end of *each calendar quarter falling within the Term*. Streams started 2026-08-01, so the first report quarter is `2026/Q3`, matching the schedule every SPP3 provider published in its forum reporting thread (`2026/Q3` → `2027/Q2`).
+**Exception — SPP3.** SPP3 providers are bound by the [SPP3 Program Terms](https://github.com/coltron-code/spp3-docs/blob/main/ENS_DAO_Service_Provider_Program_Terms_v1-0.pdf) (clause 6.3), which require a report within 30 days after the end of *each calendar quarter falling within the Term* (hence `reportDueDays: 30`). Streams started 2026-08-01, so the first report quarter is `2026/Q3`, matching the schedule every SPP3 provider published in its forum reporting thread (`2026/Q3` → `2027/Q2`).
 
 ### Proposal fields
 

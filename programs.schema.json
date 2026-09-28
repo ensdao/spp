@@ -98,6 +98,11 @@
           "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "description": "Date streams commenced."
         },
+        "reportDueDays": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Days after the end of each quarter by which the report is due, per the program's terms. Defaults to 0 (due on the last day of the quarter)."
+        },
         "discussionUrl": {
           "$ref": "#/$defs/Url",
           "description": "Initial forum discussion for this program."
