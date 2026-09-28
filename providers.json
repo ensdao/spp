@@ -73,6 +73,32 @@
       }
     },
     {
+      "name": "Fluidkey",
+      "slug": "fluidkey",
+      "website": "https://fluidkey.com",
+      "programs": {
+        "SPP3": {
+          "proposalUrl": "https://bronze-accused-porpoise-217.mypinata.cloud/ipfs/bafkreiaplckhk72bu3wuxofgkbdoky7jb3o24kk7olbb6urfaquz2os4sm",
+          "budget": 340000,
+          "streamDuration": 1
+        }
+      },
+      "reports": {}
+    },
+    {
+      "name": "Goldsky",
+      "slug": "goldsky",
+      "website": "https://goldsky.com",
+      "programs": {
+        "SPP3": {
+          "proposalUrl": "https://bronze-accused-porpoise-217.mypinata.cloud/ipfs/bafybeidblcll7pt7s4jzlte6khv7twiqnckdoalanj2aoemd27afefhyou",
+          "budget": 450000,
+          "streamDuration": 1
+        }
+      },
+      "reports": {}
+    },
+    {
       "name": "JustaName",
       "slug": "justaname",
       "website": "https://justalab.co",
@@ -125,6 +151,11 @@
           "proposalUrl": "https://discuss.ens.domains/t/spp2-namespace-application/20456",
           "budget": 400000,
           "streamDuration": 1
+        },
+        "SPP3": {
+          "proposalUrl": "https://bronze-accused-porpoise-217.mypinata.cloud/ipfs/bafybeiee73y2jwinefaszeng3frn47wmqini562qtcibzgnh42cnqiu2la",
+          "budget": 500000,
+          "streamDuration": 1
         }
       },
       "reports": {
@@ -134,6 +165,19 @@
         "2025/Q4": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/8",
         "2026/Q1": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/9"
       }
+    },
+    {
+      "name": "Nomentum Labs (Grails)",
+      "slug": "nomentum-labs",
+      "website": "https://grails.app",
+      "programs": {
+        "SPP3": {
+          "proposalUrl": "https://discuss.ens.domains/t/22371",
+          "budget": 500000,
+          "streamDuration": 1
+        }
+      },
+      "reports": {}
     },
     {
       "name": "Resolverworks",
@@ -173,6 +217,11 @@
         },
         "SPP2": {
           "proposalUrl": "https://discuss.ens.domains/t/spp2-unruggable-application/20485",
+          "budget": 400000,
+          "streamDuration": 1
+        },
+        "SPP3": {
+          "proposalUrl": "https://bronze-accused-porpoise-217.mypinata.cloud/ipfs/bafybeiedajocrvgfnj3y6ec2mrqyt62d46uiyfb6xyqraxyyosvto5tmyq",
           "budget": 400000,
           "streamDuration": 1
         }
