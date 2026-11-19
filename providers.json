@@ -18,11 +18,16 @@
         }
       },
       "reports": {
+        "2024/Q2": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/1",
+        "2024/Q3": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/4",
+        "2024/Q4": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/5",
         "2025/Q1": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/6",
         "2025/Q2": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/6",
         "2025/Q3": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/9",
         "2025/Q4": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/9",
-        "2026/Q1": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/10"
+        "2026/Q1": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/10",
+        "2026/Q2": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/12",
+        "2026/Q3": "https://discuss.ens.domains/t/blockful-service-provider-reports/19553/14"
       }
     },
     {
@@ -42,10 +47,14 @@
         }
       },
       "reports": {
+        "2024/Q4": "https://discuss.ens.domains/t/eth-limo-q4-updates/20153",
         "2025/Q1": "https://discuss.ens.domains/t/eth-limo-q1-2025-update/20586",
+        "2025/Q2": "https://discuss.ens.domains/t/eth-limo-q2-2025-update/21159",
         "2025/Q3": "https://discuss.ens.domains/t/eth-limo-q3-2025-update/21577",
         "2025/Q4": "https://discuss.ens.domains/t/eth-limo-q4-2025-update/21796",
-        "2026/Q1": "https://discuss.ens.domains/t/eth-limo-q1-2026-update/22082"
+        "2026/Q1": "https://discuss.ens.domains/t/eth-limo-q1-2026-update/22082",
+        "2026/Q2": "https://discuss.ens.domains/t/eth-limo-q2-2026-update/22313",
+        "2026/Q3": "https://discuss.ens.domains/t/eth-limo-q3-2026-update/22490"
       }
     },
     {
@@ -65,6 +74,9 @@
         }
       },
       "reports": {
+        "2024/Q2": "https://discuss.ens.domains/t/efp-service-provider-report-q1-q2-2024/19410",
+        "2024/Q3": "https://discuss.ens.domains/t/efp-service-provider-report-q3-2024/19665",
+        "2024/Q4": "https://discuss.ens.domains/t/ethid-efp-spp-financial-and-progress-reports/20102",
         "2025/Q1": "https://discuss.ens.domains/t/ethid-efp-spp-financial-and-progress-reports/20102/2",
         "2025/Q2": "https://discuss.ens.domains/t/ethid-efp-spp-financial-and-progress-reports/20102/3",
         "2025/Q3": "https://discuss.ens.domains/t/ethid-efp-spp-financial-and-progress-reports/20102/4",
@@ -83,7 +95,9 @@
           "streamDuration": 1
         }
       },
-      "reports": {}
+      "reports": {
+        "2026/Q3": "https://discuss.ens.domains/t/fluidkey-spp3-quarterly-reports/22362/2"
+      }
     },
     {
       "name": "Goldsky",
@@ -96,7 +110,9 @@
           "streamDuration": 1
         }
       },
-      "reports": {}
+      "reports": {
+        "2026/Q3": "https://discuss.ens.domains/t/goldsky-spp3-quarterly-reports/22367/2"
+      }
     },
     {
       "name": "JustaName",
@@ -112,7 +128,8 @@
       "reports": {
         "2025/Q3": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/2",
         "2025/Q4": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/3",
-        "2026/Q1": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/4"
+        "2026/Q1": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/4",
+        "2026/Q2": "https://discuss.ens.domains/t/justaname-quarterly-reports/21042/5"
       }
     },
     {
@@ -159,11 +176,16 @@
         }
       },
       "reports": {
+        "2024/Q2": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/2",
+        "2024/Q3": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/3",
+        "2024/Q4": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/4",
         "2025/Q1": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/5",
         "2025/Q2": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/6",
         "2025/Q3": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/7",
         "2025/Q4": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/8",
-        "2026/Q1": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/9"
+        "2026/Q1": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/9",
+        "2026/Q2": "https://discuss.ens.domains/t/namespace-quarterly-reports/19057/10",
+        "2026/Q3": "https://discuss.ens.domains/t/namespace-spp3-quarterly-reports/22360/2"
       }
     },
     {
@@ -177,7 +199,9 @@
           "streamDuration": 1
         }
       },
-      "reports": {}
+      "reports": {
+        "2026/Q3": "https://discuss.ens.domains/t/nomentum-labs-spp3-quarterly-reports/22488/2"
+      }
     },
     {
       "name": "Resolverworks",
@@ -190,7 +214,12 @@
           "streamDuration": 1
         }
       },
-      "reports": {}
+      "reports": {
+        "2024/Q2": "https://discuss.ens.domains/t/resolver-works-q2-2024/19359",
+        "2024/Q3": "https://discuss.ens.domains/t/resolver-works-q3-2024/19701",
+        "2024/Q4": "https://discuss.ens.domains/t/namestone-q4-2024-formerly-known-as-resolver-works/20093",
+        "2025/Q1": "https://discuss.ens.domains/t/namestone-q1-2025/20590"
+      }
     },
     {
       "name": "Unicorn.eth",
@@ -230,7 +259,9 @@
         "2025/Q2": "https://discuss.ens.domains/t/unruggable-spp2-q2-2025-quarterly-report/21200",
         "2025/Q3": "https://discuss.ens.domains/t/unruggable-update-and-spp2-q3-2025-quarterly-report/21688",
         "2025/Q4": "https://discuss.ens.domains/t/unruggable-update-and-spp2-q4-2025-quarterly-report/22093",
-        "2026/Q1": "https://discuss.ens.domains/t/unruggable-spp2-q1-2026-quarterly-report/22160"
+        "2026/Q1": "https://discuss.ens.domains/t/unruggable-spp2-q1-2026-quarterly-report/22160",
+        "2026/Q2": "https://discuss.ens.domains/t/unruggable-quarterly-report-q2-2026/22322",
+        "2026/Q3": "https://discuss.ens.domains/t/unruggable-spp3-quarterly-reports/22361/2"
       }
     },
     {
