@@ -1,21 +1,11 @@
-# SPP Accountability
+# ENS Service Provider Program data
 
-Single source of truth for the **ENS Service Provider Program (SPP)** — program governance, provider metadata, and quarterly report links.
-
-## Interfaces
-
-| Platform | URL | What it shows |
-|---|---|---|
-| Anticapture | [anticapture.com](https://anticapture.com) | Accountability table with report status, budgets, and governance links |
-
-> Build an interface that reads this data? Open a PR to add it here.
-
----
+The ENS DAO's public record of the **Service Provider Program (SPP)**: the programs, the providers funded in each one, and links to their quarterly reports. Anyone can read it or build on it. Providers update their own entries by pull request.
 
 ## Data structure
 
 ```
-spp-accountability/
+spp/
 ├── programs.json             # Program definitions + governance proposals
 ├── programs.schema.json      # JSON Schema for programs
 ├── providers.json            # Provider metadata + quarterly report URLs
@@ -43,7 +33,7 @@ Defines each SPP term: quarters, budget, and the governance proposals that creat
       "discussionUrl": "https://discuss.ens.domains/t/...",
       "budgetProposal": {
         "id": "EP 6.3",
-        "title": "Renew Service Provider Budget",
+        "title": "Budget Selection",
         "date": "2025-02-24",
         "forumUrl": "https://discuss.ens.domains/t/...",
         "snapshotUrl": "https://snapshot.box/#/s:ens.eth/proposal/...",
@@ -51,7 +41,7 @@ Defines each SPP term: quarters, budget, and the governance proposals that creat
       },
       "selectionProposal": {
         "id": "EP 6.10",
-        "title": "Select Providers for SPP Season II",
+        "title": "Service Provider Selection",
         "date": "2025-05-12",
         "forumUrl": "https://discuss.ens.domains/t/...",
         "snapshotUrl": "https://snapshot.box/#/s:ens.eth/proposal/...",
@@ -141,6 +131,11 @@ Provider metadata, program participation, and quarterly report URLs.
 | `programs.{key}.streamDuration` | Yes | `1` or `2` years |
 | `reports.{YYYY/QN}` | — | URL to published forum report for that quarter |
 
+### Reports that cover more than one quarter or program
+
+- One report can cover two quarters. Link the same post under both keys.
+- `reports` is one map per provider, keyed by calendar quarter. It is not split by program. If a provider is in two programs that share a quarter (SPP2's second year and SPP3 both include `2026/Q3`), that quarter has one entry, used for both programs.
+
 ---
 
 ## How to contribute
@@ -192,3 +187,13 @@ The validator checks:
 - No duplicate provider slugs
 - `streamDuration: 2` only used with programs that have `year2Quarters`
 - Budget proposal date is before selection proposal date
+
+---
+
+## Who uses this data
+
+| Interface | URL | What it shows |
+|---|---|---|
+| Anticapture | [anticapture.com](https://anticapture.com) | Accountability table with report status, budgets, and governance links |
+
+This list is open. If you build something that reads these files, add it here with a pull request.

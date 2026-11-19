@@ -39,7 +39,6 @@ console.log("✓ programs.json schema validation passed");
 // --- Cross-referential checks ---
 
 const errors = [];
-const warnings = [];
 const programEntries = programs.programs;
 const programKeys = new Set(Object.keys(programEntries));
 
@@ -99,8 +98,9 @@ for (const provider of providers.providers) {
     }
   }
   for (const key of Object.keys(provider.reports)) {
-    if (!providerQuarters.has(key)) {
-      warnings.push(
+    // Keys outside every program were already reported above.
+    if (allQuarters.has(key) && !providerQuarters.has(key)) {
+      errors.push(
         `${slug}: report "${key}" doesn't belong to any program the provider participates in`,
       );
     }
@@ -128,11 +128,6 @@ for (const [key, program] of Object.entries(programEntries)) {
       `${key}: budget proposal (${program.budgetProposal.id}) should be before selection (${program.selectionProposal.id})`,
     );
   }
-}
-
-if (warnings.length > 0) {
-  console.warn("Cross-validation warnings:");
-  for (const warn of warnings) console.warn(`  ⚠ ${warn}`);
 }
 
 if (errors.length > 0) {
